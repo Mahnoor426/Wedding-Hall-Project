@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookHall</title>
+    <style>
+      .all{
+        background-color: rgb(199, 141, 141);
+        height: 110px;
+        text-align: center;
+        font-size: x-large;
+        padding: 10px;
+      }
+      .slider{
+      padding: 20px; 
+      border-radius: 20px;
+      top: 50%;
+      position: absolute;
+      left: 50%;
+      height: 350;
+      width: 330;
+      transform: translate(-50%, -50%);
+      background-color: rgb(199, 141, 141);
+    }
+.guest{
+  padding: 20px; 
+  border-radius: 20px;
+  top: 50%;
+  position: absolute;
+  right: 60%;
+  width: 330;
+  transform: translate(-50%, -50%);
+  background-color:rgb(199, 141, 141);
+  height: 350px;
+}
+.range-slider {
+  width: 300px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 20px;
+}
+h3{
+  text-align: center;
+  margin-top: -10px;
+  font-size: 30px;
+  color: rgb(6, 7, 8);
+}
+.range-slider .rangeValues {
+  display: block;
+  box-shadow: 0 0 20px rgb(97,16,16);
+  padding: 20px;
+  font-size: 22px;
+  margin-bottom: 35px;
+}
+input[type=range] {
+  -webkit-appearance: none;
+  border: 1px solid white;
+  width: 300px;
+  position: absolute;
+  left: 0;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 300px;
+  height: 5px;
+  background: #ddd;
+  border: none;
+  border-radius: 3px;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background: rgb(97, 16, 16);
+  margin-top: -6px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #ccc;
+}
+/* Dropdown Button */
+.dropbtn {
+  background-color: rgb(199, 141, 141);
+  color: black;
+  padding: 16px;
+  font-size: x-large;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgb(97,16,16);
+}
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: rgb(199, 141, 141);
+}
+/* The search field */
+#myInput {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+/* The search field when it gets focus/clicked on */
+#myInput:focus {outline: 3px solid #ddd;}
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+/*margin: 20px 70px;
+  position: relative;
+  display: inline-block;*/
+  height: 330px;
+  padding: 20px; 
+  width: 330px;
+  border-radius: 20px;
+  top: 50%;
+  position: absolute;
+  left: 82%;
+  transform: translate(-50%, -50%);
+  background-color:rgb(199, 141, 141);
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  border: 1px solid #ddd;
+  z-index: 1;
+  width: 20px;
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: rgb(199, 141, 141);
+  font-size: large;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  background-color: black;
+}
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+.p1{
+    margin: 10px 500px;	
+}
+/*ONLY FOR BROWSER'S SCROLL BAR*/
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(199, 141, 141);;
+  border-radius: 10px;
+}
+       *{
+            box-sizing: border-box;
+        }
+        h2{
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin: 5px;
+        }
+        .box{
+            border: 2px solid black;
+            background-color: rgb(199, 141, 141);;
+            margin: 20px 20px;
+            padding: 10px;
+            display: inline-block;
+            width: 250px;
+            height: 300px;
+            box-sizing: border-box;
+            border-radius: 50px;
+            color: black;
+        }
+        .container{
+            margin: auto;
+            margin-top:500px;
+            width: 1200px;
+        }
+        #enterprice{
+          font-size: 20px;
+        }
+        #do{
+          text-align: center;
+        }
+
+        @media only screen and (min-width: 748px) and (max-width: 1260px) {
+	#change1{
+        width: auto;
+        height: auto;
+        
+    }
+    
+
+    }
+</style>
+<script src="https://kit.fontawesome.com/584d7cf593.js" crossorigin="anonymous"></script>
+</head>
+<body id="change1">
+  <div class="all">
+    <h1> BOOK YOUR WEDDING HALL</h1><br><br><br>
+  </div><br>
+  <br>
+    <div class="dropdown">
+      <br>
+      <h3>In which area of Karachi you want to book the hall?<h3><br>
+        <button onclick="myFunction()" class="dropbtn">Select Your Area</button>
+        <div id="myDropdown" class="dropdown-content">
+          <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+          <a href="Gulshantown.html">Gulshan Town</a>
+          <a href="Korangi.html">Korangi Town</a>
+          <a href="Liaquatabad.html">Liaquatabad Town</a>
+          <a href="Malir.html">Malir Town</a>
+          <a href="NewKarachi.html">New Karachi Town</a>
+          <a href="Nazimabad.html">North Nazimabad Town</a>
+          <a href="Orangi.html">Orangi Town</a>
+          <a href="Saddar.html">Saddar Town</a>
+          <a href="ShahFaisal.html">Shah Faisal Town</a>
+        </div>
+      </div>
+
+      <div class="slider">
+        <br><br>
+        <h3>Price Range </h3>
+        <p id="enterprice">Select your price range in Rupees for halls<p><br>
+        <div class="range-slider">
+          <span class="rangeValues"></span><br>
+          <input value="10000" min="10000" max="300000" step="500" type="range">
+          <input value="300000" min="10000" max="300000" step="500" type="range">
+        </div>
+      </div>
+      <div class="guest" id="slide2">  
+        <br>
+        <h3>Guest Range </h3>            
+        <p id="enterprice">Select your guest range for halls<p><br>              
+        <div class="range-slider">
+          <span class="rangeValues"></span><br>
+          <input value="100" min="100" max="2000" step="10" type="range">
+          <input value="2000" min="100" max="2000" step="10" type="range">
+        </div>      
+      </div>
+
+    <div class="container">
+      <h1 id="do">SERVICES WE PROVIDE</h1>
+        <div class="box">
+          <i class="fa-solid fa-list"></i> 
+            <h3 class="heading">Search Banquets of Karachi </h3>
+            <p>On Venue Bazaar you can easily search the best of best wedding halls of Karachi , Venue Bazaar provides you all the details of wedding halls for free , you just have to make call on the given number and booked the desired hall</p>
+        </div>
+        <div class="box">
+            <h3 class="heading">Support Venue Bazaar</h3>
+            <p>If you find Venue Bazaar help full then do Support us by sharing venue bazaar page on social media or our website or just give us a message, its really mean to us.</p>
+        </div>
+        <div class="box">
+            <h3 class="heading">Get Discount on Wedding Venues of Karachi</h3>
+            <p>Just tell the owner or manager that you find the details and number form venue bazaar website and get special discounts, what more you want!</p>
+        </div>
+        <div class="box">
+          <i class="fa-solid fa-phone"></i>
+          <br>
+          <h3 class="heading">Contact Wedding halls Managers</h3>
+          <p>Directly Contact to the owner of the marriage hall or the wedding hall and asked them the date you want and booked the halls directly by the managers with the help of venue bazaar.</p>
+      </div>
+    </div>
+    <script>
+      
+        /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+function getVals(){
+  // Get slider values
+  let parent = this.parentNode;
+  let slides = parent.getElementsByTagName("input");
+    let slide1 = parseFloat( slides[0].value );
+    let slide2 = parseFloat( slides[1].value );
+  // Neither slider will clip the other, so make sure we determine which is larger
+  if( slide1 > slide2 ){ let tmp = slide2; slide2 = slide1; slide1 = tmp; }
+  let displayElement = parent.getElementsByClassName("rangeValues")[0];
+//innerHTML property allows Javascript code to manipulate a website being displayed
+displayElement.innerHTML =  + slide1 + " - " + slide2;
+}
+
+window.onload = function(){
+  // Initialize Sliders
+  let sliderSections = document.getElementsByClassName("range-slider");
+      for( let x = 0; x < sliderSections.length; x++ ){
+        let sliders = sliderSections[x].getElementsByTagName("input");
+        for( let y = 0; y < sliders.length; y++ ){
+          if( sliders[y].type ==="range" ){
+     //oninput attribute fires when the value of an <input> element is changed
+            sliders[y].oninput = getVals;
+            // Manually trigger event first time to display values
+            sliders[y].oninput();
+          }
+        }
+      }
+}
+    </script>
+</body>
+</html>

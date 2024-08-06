@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <style>
+        body{
+    margin: 0;
+    padding: 0;
+    background-image: url(img12.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    height: 90vh;
+    font-family:'Times New Roman', Times, serif;
+}
+.wrapper{
+    width: 1170px;
+    margin: 5% auto;
+}
+.wrapper h2{
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    font-size: 60px;
+    color: #fff;
+    margin: 0;
+}
+.single-service {
+position: relative;
+width: 31%;
+height: 320px;
+box-sizing: border-box;
+padding: 25px 5px;
+transition: .5s;
+overflow: hidden;
+float: left;
+margin: 0 10px;
+text-align: center;
+}
+.line {
+width: 150px;
+height: 3px;
+background: #fff;
+margin: 0 auto 60px auto;
+}
+.single-service p{            
+    color: black;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bolder;
+}
+.single-service h3 {
+    font-size: 30px;
+    font-style: italic;
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    color: black;
+}
+.social {
+width: 150px;
+height: 120px;
+margin-left: -20px;
+}
+.single-service:hover{
+    box-shadow: 0 30px 35px rgba(124, 116, 116, 0.7);
+}
+.single-service span {
+position: absolute;
+top: 0;
+left: -110%;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.7);
+transition: .7s;
+transform: skewX(10deg);
+}
+.single-service:hover span{
+    left: 110%;
+}
+@media (max-width:1000px){
+    .wrapper {
+width: 100%;
+}
+.single-service {
+width: 95%;
+margin-bottom: -5px;
+}
+.wrapper h2 {
+font-size: 30px;
+}
+}
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Our Services</h2>
+      <div class="line"></div>
+      <div class="single-service">
+            <div class="social">
+      <img src="img30.jpg" alt=""></div>
+      <span></span>
+             <h3>Weddings</h3>
+      <p> With every last detail taken care of,it is made sure that your big day is effortless and unforgettable.</p>
+      </div>
+      <div class="single-service">
+            <div class="social">
+      <img src="img10.jpg" alt=""></div>
+      <span></span>
+             <h3>Social Gatherings</h3>
+      <p>From a show stopping engagement celebration to an epic surprise birthday party ,you can book a hall as you desire.</p>
+      </div>
+      <div class="single-service">
+            <div class="social">
+                <img src="img2.jpg" alt="">
+      </div>
+      <span></span>
+             <h3>Corporate Events</h3>
+      <p>Wow your guests with a unique event that aligns with your company's vision.</p>
+      </div>
+      </div>   
+</body>
+</html>

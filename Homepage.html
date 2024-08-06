@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+</head>
+<style>
+    body {
+        margin: 0px;
+        padding: 0px;
+        color: white;
+        background-image: url('p1.jpg');
+        background-repeat: no-repeat;
+        background-size: 1520px 730px;
+    }
+    .mid {
+        display: block;
+        width: 80%;
+        margin: 35px 90px;
+        left: 50px;
+    }
+    .header{
+        background-color:  rgb(134, 57, 57) ;
+    }
+    .navbar {
+        display:inline-block;
+    }
+    .navbar li {
+        display: inline-block;
+        font-size: 30px;
+    }
+    .navbar li a {
+        color: white;
+        text-decoration: none;
+        padding: 30px 50px;
+        margin: 17px;
+    }
+    .navbar li a:hover,
+    .navbar li a.active {
+        text-decoration: underline;
+        color: aquamarine;
+    }
+    #btn {
+        margin: 5px 9px;
+        padding: 15px 20px;
+        border: 5px solid white;
+        border-radius: 90px;
+        font-size: 25px;
+        cursor: pointer;
+        font-weight: bolder;
+        background-color: rgb(82, 22, 22);
+        color: white;
+        width: 300px;
+        height: 100px;
+    }
+    #btn:hover {
+        background-color: cadetblue;
+    }
+    .container {
+        margin: 10px 55px;
+        margin-left: 150px;
+        padding-left: 20px;
+        padding: 0px;
+        width: 80%;
+        font-size: xx-large;
+        text-align: center;
+        color: rgb(82, 22, 22) ;
+    }
+    #welcome{
+        font-size: 120px;
+    }
+    #shaadi{
+        font-size: 70px;
+    }
+    
+    @media only screen and (min-width: 748px) and (max-width: 1260px) {
+	#change{
+        width: auto;
+        height: auto;
+        
+    }
+    .navbar li a {
+        
+        padding: 3px 20px;
+        margin: 12px;
+    }
+    .container{
+        font-size: medium;
+        text-align: center;
+
+    }
+
+    }
+</style>
+<body id="change">
+    <header class="header">
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a> </li>
+                <li><a href="service.html">Services</a> </li>
+                <li><a href="contactus.html">Contact Us</a> </li>
+            </ul>
+        </div>
+    </header>
+    <div class="container">
+        <h1 id="welcome">WELCOME TO</h1>
+        <h1 id="shaadi">SHAADI HALL.COM</h1>
+        <form action="RegistrationForm.php" method="POST">
+            <button id="btn" >Book Halls Now</button>
+        </form>
+    </div>
+</body>
+</html>
